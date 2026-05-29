@@ -24,14 +24,15 @@ Sistema MVC en PHP con MySQL que implementa autenticación, roles, CRUD completo
 
 ## Credenciales
 
-| Rol   | Email                | Contraseña |
-|-------|----------------------|------------|
-| Admin | admin@sistema.com    | password   |
-| User  | usuario@test.com     | password   |
+| Rol   | Email             | Contraseña |
+| ----- | ----------------- | ---------- |
+| Admin | admin@sistema.com | password   |
+| User  | usuario@test.com  | password   |
 
 ## Características
 
 ### Core
+
 - Login / Logout con sesiones PHP
 - Registro de nuevos usuarios
 - CRUD completo de usuarios (admin)
@@ -39,6 +40,7 @@ Sistema MVC en PHP con MySQL que implementa autenticación, roles, CRUD completo
 - Cambio de contraseña con verificación
 
 ### Extra implementado
+
 - **Recuperación de contraseña** — token con expiración de 1 hora, enviado por email
 - **Paginación** — 10 usuarios por página en el listado
 - **Búsqueda y filtros** — por nombre/email y por rol
@@ -85,3 +87,16 @@ curl -H "X-Api-Token: mi-token-secreto-api" \
 - `password_hash()` / `password_verify()` con bcrypt
 - Tokens de reset aleatorios con expiración (`bin2hex(random_bytes(32))`)
 - Middleware de autenticación y verificación de roles en cada ruta sensible
+
+## Credenciales
+
+| Nombre          | Email                      | Contraseña   | Rol     | Estado   |
+| :-------------- | :------------------------- | :----------- | :------ | :------- |
+| Administrador   | `admin@sistema.com`        | **password** | `admin` | Activo   |
+| Carlos López    | `carlos.lopez@ejemplo.com` | **password** | `admin` | Activo   |
+| Usuario Test    | `usuario@test.com`         | **password** | `user`  | Activo   |
+| Ana García      | `ana.garcia@ejemplo.com`   | **password** | `user`  | Activo   |
+| Juan Pérez      | `juan.perez@ejemplo.com`   | **password** | `user`  | Activo   |
+| Elena Torres    | `elena.torres@ejemplo.com` | **password** | `user`  | Activo   |
+| Roberto Gómez   | `roberto.g@ejemplo.com`    | **password** | `user`  | Activo   |
+| María Rodríguez | `maria.r@ejemplo.com`      | **password** | `user`  | Inactivo |
