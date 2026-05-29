@@ -1,0 +1,115 @@
+:root {
+    --primary: #4361ee;
+    --accent: #3a0ca3;
+    --bg: #f8f9fa;
+}
+
+body {
+    background-color: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container { flex: 1; }
+
+.navbar-brand { letter-spacing: .5px; }
+
+.card {
+    border-radius: 12px;
+}
+
+.avatar-sm {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+}
+
+.avatar-lg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.avatar-xl {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
+
+.avatar-placeholder,
+.avatar-placeholder-lg,
+.avatar-placeholder-xl {
+    background: linear-gradient(135deg, #4361ee22, #3a0ca322);
+    border: 2px solid #4361ee33;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.avatar-placeholder {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+}
+
+.avatar-placeholder-lg {
+    width: 100px;
+    height: 100px;
+}
+
+.avatar-placeholder-xl {
+    width: 130px;
+    height: 130px;
+}
+
+.password-strength {
+    height: 4px;
+    border-radius: 4px;
+    background: #dee2e6;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.password-strength::after {
+    content: '';
+    display: block;
+    height: 100%;
+    border-radius: 4px;
+    transition: width .3s, background .3s;
+}
+
+.strength-weak::after   { width: 33%; background: #dc3545; }
+.strength-medium::after { width: 66%; background: #fd7e14; }
+.strength-strong::after { width: 100%; background: #198754; }
+
+.table th { font-weight: 600; font-size: .85rem; letter-spacing: .3px; }
+.table td { font-size: .9rem; }
+
+.btn { border-radius: 8px; }
+.btn-lg { padding: .65rem 1.5rem; }
+
+.form-control,
+.form-select,
+.input-group-text {
+    border-radius: 8px;
+}
+
+.input-group .form-control { border-radius: 0 8px 8px 0 !important; }
+.input-group .input-group-text { border-radius: 8px 0 0 8px !important; }
+.input-group .btn { border-radius: 0 8px 8px 0 !important; }
+
+.alert { border-radius: 10px; }
+
+.page-link { border-radius: 6px !important; margin: 0 2px; }
+
+.footer {
+    background: #1a1a2e !important;
+    color: #aaa !important;
+}
+
+@media (max-width: 576px) {
+    .table { font-size: .8rem; }
+}
